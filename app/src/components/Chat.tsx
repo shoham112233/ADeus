@@ -112,13 +112,11 @@ export default function Chat({
   return (
     <>
       <div className="h-24 bg-gradient-to-b from-background flex justify-between items-center fixed top-0 w-full"></div>
-      
+
       <div className="fixed flex space-x-4 top-4 right-4">
-        <LogoutButton
-          supabaseClient={supabaseClient}
-        />
+        <LogoutButton supabaseClient={supabaseClient} />
         <Button
-          size={'icon'}
+          size={"icon"}
           className="rounded-full bg-muted/20 text-muted-foreground hover:bg-muted/40"
           onClick={async () => {
             setMessages([]);
@@ -131,10 +129,7 @@ export default function Chat({
       </div>
 
       <div className="p-8 mt-12 mb-32">
-        <ChatLog
-          messages={messages}
-          waitingForResponse={waitingForResponse}
-        />
+        <ChatLog messages={messages} waitingForResponse={waitingForResponse} />
       </div>
 
       <div ref={bottomRef} />
